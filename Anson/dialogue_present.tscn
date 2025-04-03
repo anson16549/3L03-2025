@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://caprj8bb7m7jo"]
+
+[ext_resource type="Script" path="res://Anson/dialogue_present.gd" id="1_0p52t"]
+
+[node name="Dialogue_present1" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_0p52t")
