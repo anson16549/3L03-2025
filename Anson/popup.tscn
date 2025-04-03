@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://bn62vn1uundqy"]
+
+[ext_resource type="Script" path="res://Anson/popup.gd" id="1_s8uhc"]
+[ext_resource type="Texture2D" uid="uid://msl5hnliqx0v" path="res://Anson/dialoguebox.png" id="2_b64wc"]
+
+[node name="popup" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_s8uhc")
+
+[node name="Panel1" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 355.0
+offset_right = 480.0
+offset_bottom = 395.0
+
+[node name="DialogueBox1" type="TextureRect" parent="Panel1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.388
+anchor_top = 0.572
+anchor_right = 0.388
+anchor_bottom = 0.572
+offset_left = -483.92
+offset_top = -661.88
+offset_right = 540.08
+offset_bottom = 362.12
+texture = ExtResource("2_b64wc")
+
+[node name="RichTextLabel1" type="RichTextLabel" parent="Panel1"]
+layout_mode = 0
+offset_left = -332.0
+offset_top = -279.0
+offset_right = 472.0
+offset_bottom = -18.0
+theme_override_font_sizes/normal_font_size = 22
+text = "\"Eh? You alright there, stranger? You lookin’ like you seen a ghost. That neat amulet you turned
+up with got destroyed, I seen the shards of it fly off all over the place
+
+One flew right into that fire, at the top of those charred trees, wouldnt want to be the one to have
+to go there."
+
+[node name="Button1" type="Button" parent="Panel1"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 84.0
+offset_bottom = 36.0
+text = "ok"
+
+[connection signal="pressed" from="Panel1/Button1" to="." method="_on_Button1_pressed"]
